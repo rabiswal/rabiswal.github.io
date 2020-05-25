@@ -81,7 +81,7 @@ When you run a program, the kernel created a new process, assigned a unique ID (
 So, can I create a container just by applying the right set of namespaces and cgroup to a process? In reality, it takes more than that. It would help if you had the right tooling and support to create a container and run it on a server. This is where Docker enters to simplify the process for you.
 
 ## Connecting the dots
-**Containers provide isolation -** Isolation provides better security. Like my Mom would safeguard the kitchen items from inspects and moisture, you would keep your processes safe from any other (malicious) code/process by creating the restrictive boundary.
+**Containers provide isolation -** Isolation provides better security. Like my Mom would safeguard the kitchen items from insects and moisture, you would keep your processes safe from any other (malicious) code/process by creating the restrictive boundary.
 
 *In terms of security, VM provides a tighter model. The above comparison is against the regular process.*
 
