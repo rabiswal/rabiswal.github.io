@@ -87,7 +87,7 @@ So, can I create a container just by applying the right set of namespaces and cg
 
 **Less overhead -** Containers are about right-sized. They are short-lived. If one glass jar brakes, my Mom would replace the content with another jar of about the same size in no time. Likewise, containers require fewer system resources than VM and boots up quickly.
 
-**Use a label to identify container -** Although the label is something not related to the container, Docker made it popular. It's a mechanism for apply metadata (key-value pair) to docker objects, including containers.
+**Use a label to identify container -** Although the label is something not related to the container, Docker made it popular. It's a mechanism for applying metadata (key-value pair) to docker objects, including containers.
  
 I'm sure you can find many more scenarios like above :).
 
