@@ -203,7 +203,7 @@
   </a>
     </p>
 <p><strong>Container</strong> -
-A container is nothing but an <strong><em>isolated process</em></strong>(or you can say it’s a <em>containerized process</em>). It runs directly on top of the host OS, just like another regular process. Since it’s just like a regular process, you can see better performance, less memory consumption as compared to VM. But what makes it different from a regular process is its isolation. Here is a pictorial view of how container runs.</p>
+A container is nothing but an <strong><em>isolated process</em></strong>(or you can say it’s a <em>containerized process</em>). It runs directly on top of the host OS, just like another regular process. Since it’s just like a regular process, you can see better performance, less memory consumption as compared to VM. But what makes it different from a regular process is its isolation.</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -247,8 +247,12 @@ isolation.</p>
 </blockquote>
 <h2 id="tell-me-more-about-container-isolation"><a href="#tell-me-more-about-container-isolation" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tell me more about container isolation.</h2>
 <p>To understand container isolation, we need to understand a few (Linux) OS constructs, such as <strong>namespaces</strong> and <strong>cgroup</strong>.</p>
-<p>When you run a program, the kernel created a new process, assigned a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace.  There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process.</p>
-<p>If namespaces control what a process can see, cgroup (or control group) controls which resources a process can use. By restricting the visibility and access to other processes and resources, the Linux kernel can provide better isolation.</p>
+<p>When you run a program, the kernel created a new process, assigned a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace.  There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process. And through <em>cgroup</em>, the kernel restrict access to certain resources.</p>
+<blockquote>
+<p>In short, if namespaces control what a process can see, cgroup (or control group) controls which
+resources a process can use. By restricting the visibility and access to other processes and
+resources, the Linux kernel provides better isolation.</p>
+</blockquote>
 <p>So, can I create a container just by applying the right set of namespaces and cgroup to a process? In reality, it takes more than that. It would help if you had the right tooling and support to create a container and run it on a server. This is where Docker enters to simplify the process for you.</p>
 <h2 id="connecting-the-dots"><a href="#connecting-the-dots" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connecting the dots</h2>
 <p><strong>Containers provide isolation -</strong> Isolation provides better security. Like my Mom would safeguard the kitchen items from inspects and moisture, you would keep your processes safe from any other (malicious) code/process by creating the restrictive boundary.</p>
