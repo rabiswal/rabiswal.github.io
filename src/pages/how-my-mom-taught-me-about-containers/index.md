@@ -60,7 +60,7 @@ In both cases, a piece of software that plays a crucial role in managing and iso
 ![Native VM](./native-vm.jpg)
 
 **Container** - 
-A container is nothing but an ***isolated process***(or you can say it's a *containerized process*). It runs directly on top of the host OS, just like another regular process. Since it's just like a regular process, you can see better performance, less memory consumption as compared to VM. But what makes it different from a regular process is its isolation. Here is a pictorial view of how container runs.
+A container is nothing but an ***isolated process***(or you can say it's a *containerized process*). It runs directly on top of the host OS, just like another regular process. Since it's just like a regular process, you can see better performance, less memory consumption as compared to VM. But what makes it different from a regular process is its isolation.
 
 ![Container](./container-vm.jpg)
 
@@ -72,9 +72,11 @@ A container is nothing but an ***isolated process***(or you can say it's a *cont
 ## Tell me more about container isolation.
 To understand container isolation, we need to understand a few (Linux) OS constructs, such as **namespaces** and **cgroup**.
 
-When you run a program, the kernel created a new process, assigned a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace.  There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process.
+When you run a program, the kernel created a new process, assigned a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace.  There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process. And through *cgroup*, the kernel restrict access to certain resources.
 
-If namespaces control what a process can see, cgroup (or control group) controls which resources a process can use. By restricting the visibility and access to other processes and resources, the Linux kernel can provide better isolation.
+> In short, if namespaces control what a process can see, cgroup (or control group) controls which 
+> resources a process can use. By restricting the visibility and access to other processes and 
+> resources, the Linux kernel provides better isolation.
 
 So, can I create a container just by applying the right set of namespaces and cgroup to a process? In reality, it takes more than that. It would help if you had the right tooling and support to create a container and run it on a server. This is where Docker enters to simplify the process for you.
 
