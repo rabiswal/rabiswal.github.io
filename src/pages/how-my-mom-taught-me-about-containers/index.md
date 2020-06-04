@@ -72,7 +72,7 @@ A container is nothing but an ***isolated process***(or you can say it's a *cont
 ## Tell me more about container isolation.
 To understand container isolation, we need to understand a few (Linux) OS constructs, such as **namespaces** and **cgroup**.
 
-When you run a program, the kernel created a new process, assigned a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace.  There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process. And through *cgroup*, the kernel restrict access to certain resources.
+When you run a program, the kernel creates a new process, assigns a unique ID (PID or process ID), and runs it. The kernel also restricts what the newly created process can see via a construct called a namespace. There are a few different types of namespaces supported in Linux kernel, such as  Process IDs, mount points, User and group IDs, network, etc. You can create a new namespace of a particular type and assign it to a process. And through *cgroup*, the kernel restrict access to certain resources.
 
 > In short, if namespaces control what a process can see, cgroup (or control group) controls which 
 > resources a process can use. By restricting the visibility and access to other processes and 
@@ -87,7 +87,7 @@ So, can I create a container just by applying the right set of namespaces and cg
 
 **Containers are portable -** As the glass jars helped during shifting of house, containers would help organizations trying to move to a new and modern platform. Applications running in containers can be easily deployed to different operating systems and hardware platforms.
 
-**Less overhead -** Containers are about right-sized. They are short-lived. If one glass jar brakes, my Mom would replace the content with another jar of about the same size in no time. Likewise, containers require fewer system resources than VM and boots up quickly.
+**Less overhead -** Containers are about right-sized. They are short-lived. If one glass jar breaks, my Mom would replace the content with another jar of about the same size in no time. Likewise, containers require fewer system resources than VM and boots up quickly.
 
 **Use a label to identify container -** Although the label is something not related to the container, Docker made it popular. It's a mechanism for applying metadata (key-value pair) to docker objects, including containers.
  
