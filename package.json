@@ -1,7 +1,9 @@
 {
   "name": "softwarespeaks",
   "private": true,
-  "engines": {"node": "12.x"},
+  "engines": {
+    "node": "12.x"
+  },
   "description": "softwarespeaks",
   "version": "1.0.0",
   "author": "Rabi Biswal",
