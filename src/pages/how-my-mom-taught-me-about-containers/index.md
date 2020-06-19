@@ -7,8 +7,9 @@ cta: something
 
 As a kid, one of the fascinating places for me in my home was the kitchen area, where I had restricted access - partly due to safety concerns and partly due to my irresistible desire to pocket the heavenly looking cookies and chocolates kept within glass jars, high enough for me to reach.
 
-![Kitchen area](./containers.jpg)
+![Kitchen area](./kitchen-containers.jpg)
 
+<p style="text-align: center;"> Photo by <b>ready made</b> from <b>Pexels</b> </p>
 
 There is no free lunch - we had one rule at our home, which everyone obeyed. I would help my Mom cleaning up the glass jars and get a piece of chocolate with a pat on my back. More than that, I would get a chance to ask any absurd questions popping out of my nonsensical mind, and my Mom would decipher the answers with a beautiful smile. It was a bonus for me.
 
