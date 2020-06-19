@@ -52,17 +52,17 @@ In both cases, a piece of software that plays a crucial role in managing and iso
 **Hosted VM** - 
 [Parallels](https://en.wikipedia.org/wiki/Parallels_Desktop_for_Mac) and [VirtualBox](https://en.wikipedia.org/wiki/VirtualBox) are of hosted VM type and very popular among consumers. For example, if you have Mac Book and you want to run Windows 10 on it, you can first install Parallels on your laptop and then run Windows 10 using Parallels.
 
-![Hosted VM](./hosted-vm.jpg)
+![Hosted VM](./hosted-vm.png)
 
 
 **Native VM** - [Microsoft's Hyper-V](https://en.wikipedia.org/wiki/Hyper-V) and [XEN](https://en.wikipedia.org/wiki/Xen) are examples of native VM. Native VM directly runs on top of hardware and provides a way to resource abstraction and hence commonly referred as bare-metal VMM. These VMs are mostly used in servers and data centers.
 
-![Native VM](./native-vm.jpg)
+![Native VM](./native-vm.png)
 
 **Container** - 
 A container is nothing but an ***isolated process***(or you can say it's a *containerized process*). It runs directly on top of the host OS, just like another regular process. Since it's just like a regular process, you can see better performance, less memory consumption as compared to VM. But what makes it different from a regular process is its isolation.
 
-![Container](./container-vm.jpg)
+![Container](./container-vm.png)
 
 > In a nutshell, both VM and Container enable different types of virtualization. 
 > Virtualization is nothing but another name of abstraction (or, as you know, abstraction 
